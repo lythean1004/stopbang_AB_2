@@ -1,0 +1,3 @@
+"use client";
+import { Guard } from "@/components/Guard";import { Page,Card,Button } from "@/components/UI";import { useRouter } from "next/navigation";import { useAppState } from "@/components/StateProvider";
+export default function LowRisk(){const {state,setState}=useAppState();const router=useRouter();return <Guard><Page className="stack24"><Card className="stack16"><span className="badge">저위험</span><h1>8점 중 {state.score}점</h1><p>현재 결과는 저위험 범위입니다. 이 결과는 선별검사이며 확진이 아닙니다.</p></Card><Button variant="secondary" aria-label="처음으로" onClick={()=>{setState({started:false,answers:[],score:null});router.push("/")}}>처음으로</Button></Page></Guard>}
