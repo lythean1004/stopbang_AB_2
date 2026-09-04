@@ -1,6 +1,6 @@
 # STOP-BANG A/B 테스트 Variant B
 
-> 배포 URL: 배포 후 기록
+> 배포 URL: Vercel CLI 인증 불가로 미생성 — 아래 Vercel Import 대체 절차를 사용하세요.
 
 실제 의료 서비스가 아닌 한국어 목업입니다. Variant B는 STOP-BANG 결과 뒤에 교육 원페이저와 대칭적인 예약 방식 선택을 제공합니다.
 
@@ -74,4 +74,12 @@ vercel link --project stopbang-ab-2
 vercel --prod
 ```
 
-Vercel CLI를 사용할 수 없다면 Vercel 대시보드에서 **Add New → Project → `lythean1004/stopbang_AB_2` Import → Framework Preset: Next.js → Deploy** 순서로 배포합니다.
+Vercel CLI를 사용할 수 없다면 다음 순서로 배포합니다.
+
+1. Vercel 대시보드에서 **Add New → Project**를 선택합니다.
+2. GitHub 저장소 `lythean1004/stopbang_AB_2`를 Import합니다.
+3. 프로젝트 이름을 `stopbang-ab-2`, Framework Preset을 `Next.js`로 확인합니다.
+4. 환경 변수 `NEXT_PUBLIC_VARIANT`에 `B`를 입력합니다.
+5. **Deploy**를 선택하고 생성된 URL을 이 문서 최상단에 기록합니다.
+
+현재 실행 환경에서는 Vercel CLI 설치까지 성공했으나 기존 인증 정보가 없었고 로그인 흐름에서 `fetch failed`가 발생했습니다.
